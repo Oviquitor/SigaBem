@@ -14,4 +14,4 @@ services:
     volumes:
       - ./data:/var/lib/mysql
 
-        
+#docker-compose up -d
