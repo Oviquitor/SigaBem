@@ -1,17 +1,16 @@
 version: '3.8'
 
 services:
+
   mysql:
-    image: mysql:8.0.27
-    container_name: siga_bem_mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: vgSigaBemRoot
-      MYSQL_DATA_BASE: sigaBem
-      MYSQL_USER: vgadmin
-      MYSQL_PASSWORD: vgSigaBem
+    image: "mysql:latest"
+    restart: on-failure
     ports:
       - 3306:3306
-    volumes:
-      - ./data:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: siga_bem_db
+      MYSQL_USER: siga_bem_user
+      MYSQL_PASSWORD: nE5kMc7JCGNqwDQM
+      MYSQL_ROOT_PASSWORD: nE5kMc7JCGNqwDQN
 
 #docker-compose up -d
