@@ -28,5 +28,7 @@ CREATE TABLE funcionario
     naturalidade         VARCHAR(50) DEFAULT 'Brasileira',
     escolaridade         VARCHAR(100),
     id_fornecedor        BIGINT       NOT NULL,
-    FOREIGN KEY (id_fornecedor) REFERENCES fornecedor (id_fornecedor)
+    FOREIGN KEY (id_fornecedor) REFERENCES fornecedor (id),
+    createdAt      TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updateAt       TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 )
