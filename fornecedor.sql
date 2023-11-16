@@ -1,0 +1,25 @@
+CREATE TABLE fornecedor
+(
+    id             BIGINT       NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    razo_social    VARCHAR(255) NOT NULL,
+    nome_fantasia  VARCHAR(255),
+    cnpj           VARCHAR(14)  NOT NULL,
+    logradouro     VARCHAR(600),
+    numero         INT,
+    complemento    VARCHAR(600),
+    bairro         VARCHAR(255),
+    cep            VARCHAR(8),
+    ramo_atividade VARCHAR(100),
+    codigo         INT,
+    pais           VARCHAR(100)          DEFAULT 'Brasil',
+    uf             VARCHAR(2),
+    cidade         VARCHAR(255),
+    insc_estadual  INT,
+    insc_municipal INT,
+    telefone_1     VARCHAR(30),
+    telefone_2     VARCHAR(30),
+    fax            VARCHAR(30),
+    email          VARCHAR(255),
+    createdAt      TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updateAt       TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)
